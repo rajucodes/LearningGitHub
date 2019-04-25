@@ -2,3 +2,54 @@ What is Git?
 Git is a Distributed Version Control tool that supports distributed non-linear workflows by providing data assurance for delivering quality
 software
 
+Features of Git
+  --Distributed
+  --Non-Linear
+  --Compatible
+    --compatible with SVN,SVK using Git-SVN
+  --Branching
+  --Light weight
+    --Uses lossless compression technique to compress on client's side
+  --Speed
+  --Open Source
+  --Reliable
+    --In the event of crash data can be recovered from local repository
+  --Secure
+    --Uses SHA1 to name and identify objects
+  --Economical
+  
+Local Repository
+  --Located on local machine
+  --Resides as a .git folder inside project root
+  --only the admin of the system can work on this repo
+ 
+Central Repository
+  --Located on a remote server
+  --Exclusively consists of .git repo folder
+  --Meant for teams to share and exchange data
+
+======================================================================
+Git commands
+--git init //to create repositories
+
+//Making changes
+--status
+--add
+--commit
+
+//Parallel development
+--branch
+--merge
+--rebase
+
+//Syncing
+--add origin
+--push
+--pull
+=====================================================================
+--Install git in your system and use "git init" to create local repo
+--git clone is used to clone central repo to your local
+--use "git add origin <link>" to add to remote repo
+--pull files with "git pull"
+--Push changes with "git push"
+
