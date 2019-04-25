@@ -61,3 +61,22 @@ Git commands
 	--commited snapshots will never be changed unless done explicitly
   --using "-m" option is to include a commit message
   --use "-a" to commit all files
+
+--whenever merging make sure you are checked into the destination branch
+Parallel Development -Branching
+	--Branches are pointers to a specific commit
+	--Branches are two types
+	   --Local 
+	   --Remote-tracking branches
+
+--Git pull gets all the changes to the master branch
+--Git fetch gets the changes to a non master branch
+--Git pull is equal to Git fetch + Git Merge
+
+Rebasing:
+	--Another kind of merging
+	--Combiens work between different branches
+	--can be used to make linear sequence of commits
+	
+	
+	
