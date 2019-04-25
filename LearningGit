@@ -35,6 +35,7 @@ Git commands
 //Making changes
 --status
 --add
+  --use "-A" to commit all files
 --commit
 
 //Parallel development
@@ -53,3 +54,10 @@ Git commands
 --pull files with "git pull"
 --Push changes with "git push"
 
+--"git status" is used to know which files are added to index and are ready to commit
+--"git add" lets us add files to index
+--"git commit"
+	--refers to recording snapshots of the repo at a given time
+	--commited snapshots will never be changed unless done explicitly
+  --using "-m" option is to include a commit message
+  --use "-a" to commit all files
