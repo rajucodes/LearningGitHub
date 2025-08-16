@@ -1,0 +1,9 @@
+fastapi
+uvicorn
+jinja2
+python-multipart
+pymilvus
+fastembed>=0.7.1
+pypdf
+shortuuid
+openai

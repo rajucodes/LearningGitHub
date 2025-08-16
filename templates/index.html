@@ -1,0 +1,19 @@
+{% extends "base.html" %}
+{% block title %}Upload PDF & Guidelines{% endblock %}
+{% block content %}
+<section class="card">
+	<h2>Upload PDF and Generate Question Paper</h2>
+	<form action="/upload" method="post" enctype="multipart/form-data">
+		<label>PDF File
+			<input type="file" name="file" accept="application/pdf" required />
+		</label>
+		<label>Prompt / Guidelines
+			<textarea name="prompt" rows="4" placeholder="e.g., Create 10 mixed questions focusing on definitions and key concepts."></textarea>
+		</label>
+		<label>Number of Questions
+			<input type="number" name="num_questions" value="10" min="1" max="50" />
+		</label>
+		<button type="submit">Generate</button>
+	</form>
+</section>
+{% endblock %}

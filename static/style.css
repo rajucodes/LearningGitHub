@@ -1,0 +1,20 @@
+body { font-family: system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif; margin: 0; background: #f6f7fb; color: #222; }
+header { background: #0f172a; color: #fff; padding: 1rem 1.25rem; }
+header a { color: #fff; text-decoration: none; }
+main { padding: 1.25rem; max-width: 880px; margin: 0 auto; }
+.card { background: #fff; border-radius: 8px; padding: 1rem 1.25rem; box-shadow: 0 1px 2px rgba(0,0,0,0.06); }
+.card h2 { margin-top: 0; }
+label { display: block; margin: 0.5rem 0; }
+input[type="file"], input[type="number"], textarea { width: 100%; box-sizing: border-box; padding: 0.5rem; border: 1px solid #d1d5db; border-radius: 6px; }
+button, .btn { background: #2563eb; color: #fff; border: none; padding: 0.6rem 1rem; border-radius: 6px; cursor: pointer; }
+button:hover, .btn:hover { background: #1d4ed8; }
+.muted { color: #6b7280; }
+.questions .question { border-top: 1px solid #eee; padding: 0.75rem 0; }
+.q-header { display: flex; gap: 0.5rem; align-items: baseline; }
+.qid { font-weight: 600; }
+.q-marks { color: #64748b; font-size: 0.9rem; }
+.option { display: block; margin: 0.25rem 0; }
+.actions { margin-top: 1rem; }
+.breakdown { width: 100%; border-collapse: collapse; }
+.breakdown th, .breakdown td { border: 1px solid #e5e7eb; padding: 0.5rem; text-align: left; }
+.breakdown th { background: #f1f5f9; }
