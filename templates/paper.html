@@ -1,0 +1,38 @@
+{% extends "base.html" %}
+{% block title %}Question Paper{% endblock %}
+{% block content %}
+<section class="card">
+	<h2>{{ paper.title or 'Question Paper' }}</h2>
+	<p class="muted">{{ paper.instructions or 'Answer all questions.' }}</p>
+	<p>
+		<strong>Share link:</strong>
+		<a href="/paper/{{ paper_id }}" id="share-link">{{ request.url.scheme }}://{{ request.url.netloc }}/paper/{{ paper_id }}</a>
+		<button type="button" onclick="navigator.clipboard.writeText(document.getElementById('share-link').href)">Copy</button>
+	</p>
+	<form action="/paper/{{ paper_id }}/submit" method="post" class="questions">
+		{% for q in paper.questions %}
+		<div class="question">
+			<div class="q-header">
+				<span class="qid">Q{{ loop.index }}.</span>
+				<span class="q-marks">[{{ q.marks or 1 }}]</span>
+			</div>
+			<div class="q-text">{{ q.question }}</div>
+			<div class="q-input">
+				{% if q.type == 'mcq' %}
+					{% for opt in q.options %}
+						<label class="option">
+							<input type="radio" name="{{ q.id }}" value="{{ opt }}" /> {{ opt }}
+						</label>
+					{% endfor %}
+				{% else %}
+					<textarea name="{{ q.id }}" rows="3" placeholder="Your answer..."></textarea>
+				{% endif %}
+			</div>
+		</div>
+		{% endfor %}
+		<div class="actions">
+			<button type="submit">Submit Answers</button>
+		</div>
+	</form>
+</section>
+{% endblock %}

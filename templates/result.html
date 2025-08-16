@@ -1,0 +1,34 @@
+{% extends "base.html" %}
+{% block title %}Your Score{% endblock %}
+{% block content %}
+<section class="card">
+	<h2>Score: {{ score }} / {{ total }}</h2>
+	<p>
+		<strong>Share this paper:</strong>
+		<a href="/paper/{{ paper_id }}">{{ share_url }}</a>
+	</p>
+	<table class="breakdown">
+		<thead>
+			<tr>
+				<th>Question</th>
+				<th>Score</th>
+				<th>Out of</th>
+				<th>Feedback</th>
+			</tr>
+		</thead>
+		<tbody>
+			{% for item in breakdown %}
+			<tr>
+				<td>{{ item.id }}</td>
+				<td>{{ item.score }}</td>
+				<td>{{ item.marks }}</td>
+				<td class="muted">{{ item.feedback }}</td>
+			</tr>
+			{% endfor %}
+		</tbody>
+	</table>
+	<div class="actions">
+		<a class="btn" href="/">Create another</a>
+	</div>
+</section>
+{% endblock %}
